@@ -49,3 +49,20 @@ describe('Clean square 2;0 and get the number of bombs around', () => {
     expect(minesweeper(UAT3Fields, UAT3Steps)).equal(expectedResult);
   });
 });
+
+describe('Mark the bombs around – What I expect after I marked the 3 squares as bombs [1;0 + 1;1 + 0;1]', () => {
+  it('Should indicate the 3 bombs nearby', () => {
+    const fields = [
+      [' ', ' ', ' '],
+      ['X', 'X', ' '],
+      [' ', 'X', ' '],
+    ];
+    const steps = [
+      [2, 0],
+      [2, 1, 'check'],
+      [1, 1, 'check'],
+      [1, 0, 'check'],
+    ];
+    expect(minesweeper(fields, steps)).equal('Bomb checked with a flag');
+  });
+});

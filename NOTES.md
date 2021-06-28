@@ -16,8 +16,9 @@
 
 - Check the number of bombs around the clicked field
   - The field should be empty
+- Create functon what marks the bombs with a \*
+- Should add an action to the steps
 
 > Pomodoro 4
 
 - Note
-
