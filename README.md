@@ -6,9 +6,11 @@
 
 - Source file
 - Basic test file
-- Jest for testing (watch and coverage) 
-- EsLint + Prettier for code style check
+- Jest for testing (watch and coverage)
+- EsLint + Prettier for code style check and linting
 - Complexity check
+- Automated pipelies with Github actions
+  - The tests and checks runs automatically and indicates above ^
 
 ## User story 1
 
@@ -35,7 +37,7 @@
 
 > Mark the bombs around – What I expect after I marked the 3 squares as bombs [1;0 + 1;1 + 0;1]
 
-- Should mark the bombs with a *
+- Should mark the bombs with a \*
 
 ## User story 5
 

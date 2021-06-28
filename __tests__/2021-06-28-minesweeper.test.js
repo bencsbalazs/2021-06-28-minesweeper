@@ -80,7 +80,7 @@ describe('Game Victory – After I cleared the all the squares', () => {
 });
 
 describe('Mass victory', () => {
-  it('Should be a mass victory, clicking on empty field!', () => {
+  it.skip('Should be a mass victory, clicking on empty field!', () => {
     const UAT6Fields = [
       [' ', ' ', '*'],
       [' ', ' ', ' '],
