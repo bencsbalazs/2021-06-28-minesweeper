@@ -22,6 +22,7 @@ const minesweeper = (fields) => {
     return false;
   }
   console.log(drawBoard(fields));
+  return '';
 };
 
 module.exports = { minesweeper, drawBoard };
