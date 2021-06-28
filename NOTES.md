@@ -3,6 +3,7 @@
 > Pomodoro 1
 
 - Created the readme file.
+- Basic functions to draw the board
 
 > Pomodoro 2
 

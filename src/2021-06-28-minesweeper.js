@@ -24,4 +24,4 @@ const minesweeper = (fields) => {
   console.log(drawBoard(fields));
 };
 
-module.exports = { minesweeper };
+module.exports = { minesweeper, drawBoard };

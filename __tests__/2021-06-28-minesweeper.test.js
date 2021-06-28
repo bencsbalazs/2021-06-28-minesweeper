@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { minesweeper } = require('../src/2021-06-28-minesweeper');
+const { minesweeper, drawBoard } = require('../src/2021-06-28-minesweeper');
 
 describe('Game board creation', () => {
   const UAT0Fields = ' ';
