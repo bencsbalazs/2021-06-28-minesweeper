@@ -24,3 +24,15 @@ describe('Game board creation', () => {
     expect(drawBoard(UAT12Fields)).equal(' | | \n-+-+-\n | | \n-+-+-\n | | ');
   });
 });
+
+describe('Game over on step 1', () => {
+  it('Should be game over if step on bomb', () => {
+    const UAT2Fields = [
+      [' ', ' ', ' '],
+      [' ', 'X', ' '],
+      [' ', ' ', ' '],
+    ];
+    const steps = [[1, 1]];
+    expect(minesweeper(UAT2Fields, steps)).equal('Game over');
+  });
+});

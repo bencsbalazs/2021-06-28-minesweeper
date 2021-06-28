@@ -7,7 +7,9 @@
 
 > Pomodoro 2
 
-- Note
+- Add the steps list
+  - It should be a list of coordinates and actions
+  - The returning massage should be changed to variable
 
 > Pomodoro 3
 
