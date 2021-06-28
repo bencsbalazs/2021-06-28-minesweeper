@@ -78,3 +78,15 @@ describe('Game Victory – After I cleared the all the squares', () => {
     expect(minesweeper(UAT5Fields, UAT5Steps)).equal('You win!');
   });
 });
+
+describe('Mass victory', () => {
+  it('Should be a mass victory, clicking on empty field!', () => {
+    const UAT6Fields = [
+      [' ', ' ', '*'],
+      [' ', ' ', ' '],
+      [' ', ' ', ' '],
+    ];
+    const UAT6Steps = [[2, 0]];
+    expect(minesweeper(UAT6Fields, UAT6Steps)).equal('You win!');
+  });
+});

@@ -21,4 +21,5 @@
 
 > Pomodoro 4
 
-- Note
+- It should be a mass wictory if you click on an empty cell.
+- Recursion should be added to the function
