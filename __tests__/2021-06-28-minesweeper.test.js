@@ -66,3 +66,15 @@ describe('Mark the bombs around – What I expect after I marked the 3 squares a
     expect(minesweeper(fields, steps)).equal('Bomb checked with a flag');
   });
 });
+
+describe('Game Victory – After I cleared the all the squares', () => {
+  it('Should return victory message', () => {
+    const UAT5Fields = [
+      ['2', '2', '1'],
+      ['*', '*', '2'],
+      ['3', '*', '2'],
+    ];
+    const UAT5Steps = [[2, 0]];
+    expect(minesweeper(UAT5Fields, UAT5Steps)).equal('You win!');
+  });
+});
