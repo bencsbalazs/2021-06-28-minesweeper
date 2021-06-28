@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-console */
 const drawBoard = (fields) => {
@@ -17,12 +18,20 @@ const moreBombs = (field) => {
   return counter > 8;
 };
 
-const minesweeper = (fields) => {
+const minesweeper = (fields, steps) => {
   if (typeof fields !== 'object' || moreBombs(fields)) {
     return false;
   }
+  let message;
+  steps.forEach((step) => {
+    if (fields[step[0]][step[1]] === 'X') {
+      message = 'Game over';
+      fields[step[0]][step[1]] = 'B';
+    }
+  });
   console.log(drawBoard(fields));
-  return '';
+  console.log(message);
+  return message;
 };
 
 module.exports = { minesweeper, drawBoard };
