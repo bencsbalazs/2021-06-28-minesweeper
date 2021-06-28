@@ -16,3 +16,4 @@
 
 - Create function to check the field and mark it with * if needed
 - Separate functions to reduce compexity
+- Add function to check winner

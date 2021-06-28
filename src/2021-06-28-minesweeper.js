@@ -52,6 +52,15 @@ const checkTheField = (fields, step) => {
 
 const doStep = (fields, step) => {
   let result = {};
+  let counter = 0;
+  fields.forEach((row) => {
+    row.forEach((cell) => {
+      if (cell === ' ') counter++;
+    });
+  });
+  if (counter < 1) {
+    result = { message: 'You win!', fields };
+  }
   if (step[2] === 'check') {
     result = checkTheField(fields, step);
   }

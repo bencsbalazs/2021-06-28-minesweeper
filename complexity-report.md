@@ -11,7 +11,7 @@
 
 ## /home/balazsbencs/Apps/Learning/XPFarm/2. for Orange belt/2021-06-28-minesweeper/src/2021-06-28-minesweeper.js
 
-* Physical LOC: 80
+* Physical LOC: 89
 * Logical LOC: 10
 * Mean parameter count: 0
 * Cyclomatic complexity: 1
