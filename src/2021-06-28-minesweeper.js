@@ -46,6 +46,11 @@ const checkNearbyFields = (fields, step) => {
 
 const doStep = (fields, step) => {
   let result = {};
+  if (step[2] === 'check') {
+    const message = 'Bomb checked with a flag';
+    fields[step[0]][step[1]] = '*';
+    result = { message, fields };
+  }
   if (fields[step[0]][step[1]] === 'X') {
     result = gameOver(fields, step);
   }
