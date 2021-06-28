@@ -15,4 +15,12 @@ describe('Game board creation', () => {
     ];
     expect(minesweeper(UAT1Fields)).equal(false);
   });
+  it('The bombs should be hidden on the board', () => {
+    const UAT12Fields = [
+      [' ', ' ', ' '],
+      [' ', 'X', ' '],
+      [' ', ' ', ' '],
+    ];
+    expect(drawBoard(UAT12Fields)).equal(' | | \n-+-+-\n | | \n-+-+-\n | | ');
+  });
 });
