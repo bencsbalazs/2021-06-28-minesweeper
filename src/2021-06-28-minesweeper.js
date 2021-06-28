@@ -24,10 +24,33 @@ const moreBombs = (field) => {
   return counter > 8;
 };
 
+const checkNearbyFields = (fields, step) => {
+  let nearbyBombs = 0;
+  let result = {};
+  if (fields[step[0] - 1][step[1]] === 'X') {
+    nearbyBombs++;
+  }
+  if (fields[step[0] - 1][step[1] + 1] === 'X') {
+    nearbyBombs++;
+  }
+  if (fields[step[0]][step[1] + 1] === 'X') {
+    nearbyBombs++;
+  }
+  fields[step[0]][step[1]] = nearbyBombs;
+  result = {
+    fields,
+    message: `${nearbyBombs} bombs around`,
+  };
+  return result;
+};
+
 const doStep = (fields, step) => {
   let result = {};
   if (fields[step[0]][step[1]] === 'X') {
     result = gameOver(fields, step);
+  }
+  if (fields[step[0]][step[1]] === ' ') {
+    result = checkNearbyFields(fields, step);
   }
   return result;
 };
