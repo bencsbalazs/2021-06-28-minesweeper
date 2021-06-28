@@ -36,3 +36,16 @@ describe('Game over on step 1', () => {
     expect(minesweeper(UAT2Fields, steps)).equal('Game over');
   });
 });
+
+describe('Clean square 2;0 and get the number of bombs around', () => {
+  it('Should click on empty cell', () => {
+    const UAT3Fields = [
+      [' ', ' ', ' '],
+      ['X', 'X', ' '],
+      [' ', 'X', ' '],
+    ];
+    const UAT3Steps = [[2, 0]];
+    const expectedResult = '3 bombs around';
+    expect(minesweeper(UAT3Fields, UAT3Steps)).equal(expectedResult);
+  });
+});

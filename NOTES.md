@@ -14,7 +14,8 @@
 
 > Pomodoro 3
 
-- Note
+- Check the number of bombs around the clicked field
+  - The field should be empty
 
 > Pomodoro 4
 
