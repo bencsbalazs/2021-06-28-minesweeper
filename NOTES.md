@@ -2,7 +2,7 @@
 
 > Pomodoro 1
 
-- Note
+- Created the readme file.
 
 > Pomodoro 2
 
