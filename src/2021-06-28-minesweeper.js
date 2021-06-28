@@ -50,15 +50,19 @@ const checkTheField = (fields, step) => {
   return { fields, message };
 };
 
-const doStep = (fields, step) => {
-  let result = {};
+const checkWinner = (fields) => {
   let counter = 0;
   fields.forEach((row) => {
     row.forEach((cell) => {
       if (cell === ' ') counter++;
     });
   });
-  if (counter < 1) {
+  return counter < 1;
+};
+
+const doStep = (fields, step) => {
+  let result = {};
+  if (checkWinner(fields)) {
     result = { message: 'You win!', fields };
   }
   if (step[2] === 'check') {
