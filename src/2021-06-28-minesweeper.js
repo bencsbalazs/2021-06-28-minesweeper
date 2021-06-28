@@ -8,6 +8,12 @@ const drawBoard = (fields) => {
   return board;
 };
 
+const gameOver = (fields, step) => {
+  const message = 'Game over';
+  fields[step[0]][step[1]] = 'B';
+  return { fields, message };
+};
+
 const moreBombs = (field) => {
   let counter = 0;
   field.forEach((row) => {
@@ -18,16 +24,24 @@ const moreBombs = (field) => {
   return counter > 8;
 };
 
+const doStep = (fields, step) => {
+  let result = {};
+  if (fields[step[0]][step[1]] === 'X') {
+    result = gameOver(fields, step);
+  }
+  return result;
+};
+
 const minesweeper = (fields, steps) => {
   if (typeof fields !== 'object' || moreBombs(fields)) {
     return false;
   }
   let message;
+  let move;
   steps.forEach((step) => {
-    if (fields[step[0]][step[1]] === 'X') {
-      message = 'Game over';
-      fields[step[0]][step[1]] = 'B';
-    }
+    move = doStep(fields, step);
+    message = move.message;
+    fields = move.fields;
   });
   console.log(drawBoard(fields));
   console.log(message);

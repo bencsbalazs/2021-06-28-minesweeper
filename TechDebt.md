@@ -9,3 +9,5 @@
 
 - Add steps list
 - Loop to iterate throught the list
+- Separate function to do the steps
+- Seperate function for game over
